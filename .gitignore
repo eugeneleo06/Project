@@ -1,0 +1,4 @@
+# ignore large model
+*.pkl 
+
+*.xlsx

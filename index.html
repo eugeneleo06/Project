@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio id="audio" controls autoplay loop>
+        <source src="file_example_MP3_2MG.mp3" type="audio/mpeg">
+    </audio>
+    <img onclick="toggleAudio()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Speaker_Icon.svg/800px-Speaker_Icon.svg.png" style="width: 50px; height: auto;" id="speakerImg">
+    <script type="text/javascript">
+        function toggleAudio() {
+            var speaker = document.getElementById("speakerImg");
+            var audio = document.getElementById("audio");
+
+            if (audio.muted) {
+                speaker.src= "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Speaker_Icon.svg/800px-Speaker_Icon.svg.png";
+                audio.muted=false;
+            } else if (!audio.muted) {
+                audio.muted = true;
+                speaker.src= "https://cdn-icons-png.flaticon.com/512/56/56882.png";
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>
